@@ -1,162 +1,309 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gams — Portafolio</title>
-<link rel="stylesheet" href="CSS/main_style.css" />
-<script src="Javascript/portafolio.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gams — Portafolio</title>
+
+  <link rel="stylesheet" href="CSS/main_style.css">
+  <script src="Javascript/portafolio.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-  <div class="wrap">
-    <span class="brand">Gabriel Maldonado</span>
-    <nav id="nav">
-      <ul>
-        <li><a href="#hero" class="active">Inicio</a></li>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="wrap">
+      <span class="brand">Gabriel Maldonado</span>
 
-<section id="hero" class="hero wrap">
-  <div>
-    <h1>Gams</h1>
-    <p id="role-line" class="mono"></p>
-    <p class="lead">Estudiante de Ingeniería en Sistemas / Ciencias de la Computación en la Universidad Católica de Honduras (UNICAH), enfocado en desarrollo móvil, aplicaciones de escritorio y bases de datos.</p>
-    <div class="cta-row">
-      <button class="btn primary" onclick="document.getElementById('projects').scrollIntoView()">Ver proyectos</button>
-      <button class="btn ghost" onclick="document.getElementById('contact').scrollIntoView()">Contactarme</button>
-    </div>
-  </div>
-  <div class="frame">
-    <div class="filename">Foto de perfil</div>
-    <div class="photo-box">
-      <img id="profile-photo" src="Imgs/SelfiePro.jpeg" alt="Foto de perfil de Gabriel Maldonado"
-           onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex'">
-      <div id="avatar-fallback" class="avatar-fallback" style="display:none">G</div>
-    </div>
-  </div>
-</section>
+      <nav id="nav">
+        <ul>
+          <li><a href="#hero" class="active">Inicio</a></li>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
 
-<section id="about" class="wrap">
-  <h2>Sobre mí</h2>
-  <p>Soy estudiante de Ingeniería en Sistemas y Ciencias de la Computación en UNICAH, Honduras. 
-    Trabajo tanto en proyectos individuales como en equipo, desarrollando aplicaciones Android y 
-    sistemas de escritorio. También cuento con experiencia en análisis e implementación de soluciones 
-    de software, control de calidad y programación de microcontroladores. Me interesa seguir fortaleciendo 
-    mis habilidades técnicas y adquirir experiencia en el desarrollo de soluciones tecnológicas.
-  </p>  
-  <dl>
-    <dt>Universidad</dt><dd>Universidad Católica de Honduras (UNICAH)</dd>
-    <dt>Ubicación</dt><dd>Tegucigalpa, Honduras</dd>
-    <dt>Enfoque</dt><dd>Desarrollo móvil, de escritorio y bases de datos</dd>
-  </dl>
-</section>
+      <button id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
-<section id="skills" class="wrap">
-  <h2>Habilidades</h2>
-  <div class="skill-group">
-    <h3>Lenguajes y plataformas</h3>
-    <div class="pill-row">
-      <span class="pill">C#</span><span class="pill">Java (Android)</span><span class="pill">Arduino / C++</span>
-      <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span>
-    </div>
-  </div>
-  <div class="skill-group">
-    <h3>Bases de datos</h3>
-    <div class="pill-row">
-      <span class="pill">SQL Server</span><span class="pill">PostgreSQL</span><span class="pill">Supabase</span>
-    </div>
-  </div>
-  <div class="skill-group">
-    <h3>Herramientas</h3>
-    <div class="pill-row">
-      <span class="pill">Android Studio</span><span class="pill">SonarQube</span><span class="pill">Excel</span><span class="pill">Visual Studio Code</span>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="wrap">
-  <h2>Proyectos</h2>
-  <div class="project-grid">
-    <div class="card">
-      <h3>App de Control Académico</h3>
-      <span class="stack">Java · SQLite · Android Studio · PostgreSQL/Supabase</span>
-      <p>Aplicación Android para control académico universitario, con base de datos PostgreSQL/Supabase con políticas RLS y triggers para creación automática de perfiles de usuario.</p>
-    </div>
-    <div class="card">
-      <h3>Sistema de Gestión Sublima</h3>
-      <span class="stack">C# · Windows Forms · SQL Server (Azure)</span>
-      <p>Aplicación de escritorio para gestión empresarial, desarrollada en equipo (Grupo 4). Incluye documentación de arquitectura de 22 secciones y pruebas de carga con NBomber.</p>
-    </div>
-        <div class="card">
-      <h3>Control de Motores con Arduino</h3>
-      <span class="stack">Arduino · C++ · Tinkercad</span>
-      <p>Proyecto del curso de Microcontroladores: control de motores con puente H L293D, sensores y simulación en Tinkercad.</p>
-    </div>
-     <div class="card">
-      <h3>Reportes de Control Estadístico</h3>
-      <span class="stack">Excel</span>
-      <p>Elaboración de reportes de control de calidad estadístico: cartas C, U, np, X-bar/R y p, con cálculo de límites de control y análisis de capacidad del proceso (Cp/Cpk).</p>
-    </div>
-    <div class="card">
-      <h3>ElectroMax</h3>
-      <span class="stack">HTML · CSS</span>
-      <p>Sitio de tienda de electrónica ficticia construido únicamente con HTML y CSS, sin JavaScript, como práctica de maquetado y estilos.</p>
-    </div>
-    <div class="card">
-      <h3>Sitio de Panadería</h3>
-      <span class="stack">HTML · CSS Grid/Flexbox</span>
-      <p>Sitio web responsivo para una panadería, con maquetado adaptable a distintos tamaños de pantalla usando CSS Grid y Flexbox.</p>
-    </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="wrap">
-  <h2>Contacto</h2>
-  <div class="cols">
-    <ul class="contact-list">
-      <li><span>Correo</span><a href="mailto:gaba_maldonados43@unicah.com">gaba_maldonados43@unicah.com</a></li>
-      <li><span>GitHub</span><a href="https://github.com/gams18" target="_blank" rel="noopener">github.com/gams18</a></li>
-      <li><span>Numero de Telefono</span>+504 9599-3106</li>
-    </ul>
+  <section id="hero" class="hero wrap">
     <div>
-      <form id="contact-form" novalidate>
-        <div>
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name">
-          <div class="error" id="name-error"></div>
-        </div>
-        <div>
-          <label for="email">Correo</label>
-          <input type="text" id="email" name="email">
-          <div class="error" id="email-error"></div>
-        </div>
-        <div>
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message"></textarea>
-          <div class="error" id="message-error"></div>
-        </div>
-        <button type="submit" class="btn primary">Enviar mensaje</button>
-      </form>
-      <div id="form-success">Mensaje validado correctamente. (Este formulario es de demostración: conéctalo a un servicio como Formspree o EmailJS para enviarlo de verdad).</div>
-    </div>
-  </div>
-</section>
+      <h1>Gabriel Maldonado</h1>
 
-<footer class="wrap">
-  <p>Repositorio: <a href="https://github.com/TU_USUARIO/TU_REPO" target="_blank" rel="noopener">https://github.com/TU_USUARIO/TU_REPO</a></p>
-  <p>GitHub Pages: <a href="https://TU_USUARIO.github.io/TU_REPO/" target="_blank" rel="noopener">https://TU_USUARIO.github.io/TU_REPO/</a></p>
-  <p>© <span id="year"></span> Gams — hecho con HTML, CSS y JavaScript.</p>
-</footer>
+      <p id="role-line" class="mono"></p>
+
+      <p class="lead">
+        Estudiante de Ingeniería en Sistemas / Ciencias de la Computación,
+        interesado en el desarrollo de software, aplicaciones móviles,
+        sistemas de escritorio, bases de datos y calidad de software.
+      </p>
+
+      <div class="cta-row">
+        <button class="btn primary"
+          onclick="document.getElementById('projects').scrollIntoView()">
+          Ver proyectos
+        </button>
+
+        <button class="btn ghost"
+          onclick="document.getElementById('contact').scrollIntoView()">
+          Contactarme
+        </button>
+      </div>
+    </div>
+
+    <div class="frame">
+      <div class="filename">Foto de perfil</div>
+
+      <div class="photo-box">
+        <img id="profile-photo" src="Imgs/SelfiePro.jpeg" alt="Foto de perfil de Gabriel Maldonado"
+          onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex'"
+        >
+
+        <div id="avatar-fallback" class="avatar-fallback" style="display:none">
+          G
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="wrap">
+    <h2>Sobre mí</h2>
+
+    <p>
+      Soy estudiante de Ingeniería en Sistemas y Ciencias de la Computación
+      en la Universidad Católica de Honduras (UNICAH). He trabajado en
+      proyectos individuales y en equipo, desarrollando aplicaciones Android,
+      sistemas de escritorio y soluciones basadas en bases de datos.
+      También cuento con experiencia en análisis de software, control de
+      calidad y programación de microcontroladores. Actualmente busco seguir
+      fortaleciendo mis habilidades y adquirir experiencia en el desarrollo
+      de soluciones tecnológicas.
+    </p>
+
+    <dl>
+      <dt>Universidad</dt>
+      <dd>Universidad Católica de Honduras (UNICAH)</dd>
+
+      <dt>Ubicación</dt>
+      <dd>Tegucigalpa, Honduras</dd>
+
+      <dt>Áreas</dt>
+      <dd>Desarrollo móvil, aplicaciones de escritorio, bases de datos y calidad de software</dd>
+    </dl>
+  </section>
+
+  <section id="skills" class="wrap">
+    <h2>Habilidades</h2>
+
+    <div class="skill-group">
+      <h3>Lenguajes y plataformas</h3>
+
+      <div class="pill-row">
+        <span class="pill">C#</span>
+        <span class="pill">Java (Android)</span>
+        <span class="pill">Arduino / C++</span>
+        <span class="pill">HTML</span>
+        <span class="pill">CSS</span>
+        <span class="pill">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>Bases de datos</h3>
+
+      <div class="pill-row">
+        <span class="pill">SQL Server</span>
+        <span class="pill">PostgreSQL</span>
+        <span class="pill">Supabase</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>Herramientas</h3>
+
+      <div class="pill-row">
+        <span class="pill">Android Studio</span>
+        <span class="pill">SonarQube</span>
+        <span class="pill">Excel</span>
+        <span class="pill">Visual Studio Code</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="wrap">
+    <h2>Proyectos</h2>
+
+    <div class="project-grid">
+
+      <div class="card">
+        <h3>App de Control Académico</h3>
+
+        <span class="stack">
+          Java · Android Studio · PostgreSQL · Supabase
+        </span>
+
+        <p>
+          Aplicación Android para el control académico universitario,
+          desarrollada con Java y conectada a PostgreSQL mediante Supabase.
+          Incluye políticas RLS y triggers para la gestión de usuarios.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Sistema de Gestión Sublima</h3>
+
+        <span class="stack">
+          C# · Windows Forms · SQL Server (Azure)
+        </span>
+
+        <p>
+          Aplicación de escritorio desarrollada en equipo para la gestión
+          empresarial. Incluye documentación de arquitectura de 22 secciones
+          y pruebas de carga realizadas con NBomber.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Control de Motores con Arduino</h3>
+
+        <span class="stack">
+          Arduino · C++ · Tinkercad
+        </span>
+
+        <p>
+          Proyecto del curso de Microcontroladores para el control de motores
+          mediante un puente H L293D, sensores y simulación en Tinkercad.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Reportes de Control Estadístico</h3>
+
+        <span class="stack">
+          Excel
+        </span>
+
+        <p>
+          Elaboración de reportes de control de calidad estadístico mediante
+          cartas C, U, np, X-bar/R y p, incluyendo cálculo de límites de
+          control y análisis de capacidad del proceso (Cp/Cpk).
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>ElectroMax</h3>
+
+        <span class="stack">
+          HTML · CSS
+        </span>
+
+        <p>
+          Sitio web de una tienda de electrónica ficticia construido
+          únicamente con HTML y CSS, como práctica de maquetado,
+          estructura y estilos.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Sitio de Panadería</h3>
+
+        <span class="stack">
+          HTML · CSS Grid/Flexbox
+        </span>
+
+        <p>
+          Sitio web responsivo para una panadería, con maquetado adaptable
+          a distintos tamaños de pantalla utilizando CSS Grid y Flexbox.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="wrap">
+    <h2>Contacto</h2>
+
+    <div class="cols">
+
+      <ul class="contact-list">
+        <li>
+          <span>Correo</span>
+          <a href="mailto:gaba_maldonados43@unicah.com">
+            gaba_maldonados43@unicah.com
+          </a>
+        </li>
+
+        <li>
+          <span>GitHub</span>
+          <a href="https://github.com/gams18" target="_blank" rel="noopener">
+            github.com/gams18
+          </a>
+        </li>
+
+        <li>
+          <span>Número de teléfono</span>
+          +504 9599-3106
+        </li>
+      </ul>
+
+      <div>
+        <form id="contact-form" novalidate>
+          <div>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name">
+            <div class="error" id="name-error"></div>
+          </div>
+
+          <div>
+            <label for="email">Correo</label>
+            <input type="text" id="email" name="email">
+            <div class="error" id="email-error"></div>
+          </div>
+
+          <div>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message"></textarea>
+            <div class="error" id="message-error"></div>
+          </div>
+
+          <button type="submit" class="btn primary">
+            Enviar mensaje
+          </button>
+        </form>
+
+        <div id="form-success">
+          Mensaje validado correctamente.
+          (Este formulario es de demostración: conéctalo a un servicio
+          como Formspree o EmailJS para enviarlo de verdad).
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <p>
+      Repositorio:
+      <a href="https://github.com/gams18/Portafolio" target="_blank" rel="noopener">
+        Ver repositorio en GitHub
+      </a>
+    </p>
+
+    <p>
+      GitHub Pages:
+      <a href="https://gams18.github.io/Portafolio/" target="_blank" rel="noopener">
+        Ver portafolio publicado
+      </a>
+    </p>
+
+    <p>
+      © <span id="year"></span> Gams — hecho con HTML, CSS y JavaScript.
+    </p>
+  </footer>
 
 </body>
 </html>

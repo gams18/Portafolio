@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. VARIABLES & TEMAS (Modo Claro / Oscuro)
-   ========================================================================== */
 :root {
   --bg-primary: #f8fafc;
   --bg-surface: #ffffff;
@@ -16,21 +13,6 @@
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }
 
-[data-theme="dark"] {
-  --bg-primary: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-alt: #334155;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border: #334155;
-  --primary: #3b82f6;
-  --primary-hover: #60a5fa;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-}
-
-/* ==========================================================================
-   2. ESTILOS BASE
-   ========================================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -90,9 +72,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ==========================================================================
-   3. HEADER Y NAVEGACIÓN
-   ========================================================================== */
 header {
   position: sticky;
   top: 0;
@@ -131,12 +110,8 @@ nav a.active, nav a:hover {
   text-decoration: none;
 }
 
-.header-actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-#theme-toggle, #nav-toggle {
+#nav-toggle {
+  display: none;
   background: transparent;
   border: 1px solid var(--border);
   color: var(--text-main);
@@ -146,13 +121,16 @@ nav a.active, nav a:hover {
   font-size: 1rem;
 }
 
-#nav-toggle {
-  display: none;
+.cursor {
+  animation: blink 1s steps(1) infinite;
 }
 
-/* ==========================================================================
-   4. HERO SECTION
-   ========================================================================== */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -211,7 +189,6 @@ nav a.active, nav a:hover {
   background-color: var(--bg-alt);
 }
 
-/* Foto de Perfil & Marco */
 .frame {
   background-color: var(--bg-surface);
   border: 1px solid var(--border);
@@ -254,9 +231,6 @@ nav a.active, nav a:hover {
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   5. SECCIÓN SOBRE MÍ
-   ========================================================================== */
 dl {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -273,9 +247,6 @@ dt {
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   6. HABILIDADES (Pills)
-   ========================================================================== */
 .skill-group {
   margin-bottom: 1.5rem;
 }
@@ -301,9 +272,6 @@ dt {
   font-weight: 500;
 }
 
-/* ==========================================================================
-   7. PROYECTOS (Grid & Cards)
-   ========================================================================== */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -345,14 +313,6 @@ dt {
   flex-grow: 1;
 }
 
-.card a {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-/* ==========================================================================
-   8. CONTACTO & FORMULARIO
-   ========================================================================== */
 .cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -421,9 +381,6 @@ textarea {
   font-size: 0.85rem;
 }
 
-/* ==========================================================================
-   9. FOOTER Y RESPONSIVE
-   ========================================================================== */
 footer {
   border-top: 1px solid var(--border);
   text-align: center;
@@ -454,10 +411,26 @@ footer p {
   }
 
   nav {
-    display: none; /* Ideal para activar con JavaScript mediante el botón nav-toggle */
+    display: none;
+  }
+
+  nav.open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav.open ul {
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
   }
 
   #nav-toggle {
-    display: block;
+    display: inline-block;
   }
 }
