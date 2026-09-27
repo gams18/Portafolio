@@ -18,21 +18,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach(s => observer.observe(s));
 
-const roles = [
-  'Estudiante de Ingeniería en Sistemas',
-  'Desarrollador Android (Java)',
-  'Desarrollador de escritorio (C#)',
-  'Entusiasta de microcontroladores (Arduino)'
-];
-const roleLine = document.getElementById('role-line');
-let ri = 0;
-function showRole() {
-  roleLine.innerHTML = roles[ri] + '<span class="cursor">_</span>';
-  ri = (ri + 1) % roles.length;
-}
-showRole();
-setInterval(showRole, 2800);
-
 const form = document.getElementById('contact-form');
 const success = document.getElementById('form-success');
 form.addEventListener('submit', (e) => {
