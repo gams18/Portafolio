@@ -37,10 +37,6 @@ body {
   padding: 3rem 1.5rem;
 }
 
-.mono {
-  font-family: var(--font-mono);
-}
-
 h1, h2, h3 {
   line-height: 1.2;
   margin-bottom: 1rem;
