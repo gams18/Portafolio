@@ -1,16 +1,5 @@
 :root {
-  --bg-primary: #f8fafc;
-  --bg-surface: #ffffff;
-  --bg-alt: #f1f5f9;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --border: #e2e8f0;
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --radius: 8px;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  
 }
 
 * {
@@ -24,9 +13,9 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--bg-primary);
-  color: var(--text-main);
+  font-family: @font-body;
+  background-color: @bg-primary;
+  color: @text-main;
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -53,13 +42,13 @@ h2::after {
   display: block;
   width: 40px;
   height: 4px;
-  background-color: var(--primary);
+  background-color: @primary;
   border-radius: 2px;
   margin-top: 0.5rem;
 }
 
 a {
-  color: var(--primary);
+  color: @primary;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -68,21 +57,6 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  background-color: var(--bg-surface);
-  border-bottom: 1px solid var(--border);
-  z-index: 100;
-  backdrop-filter: blur(8px);
-}
-
-header .wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-}
 
 .brand {
   font-weight: 700;
@@ -96,36 +70,28 @@ nav ul {
 }
 
 nav a {
-  color: var(--text-muted);
+  color: @text-muted;
   font-weight: 500;
   font-size: 0.95rem;
 }
 
 nav a.active, nav a:hover {
-  color: var(--primary);
+  color: @primary;
   text-decoration: none;
 }
 
 #nav-toggle {
   display: none;
   background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-main);
+  border: 1px solid @border;
+  color: @text-main;
   padding: 0.4rem 0.75rem;
-  border-radius: var(--radius);
+  border-radius: @radius;
   cursor: pointer;
   font-size: 1rem;
 }
 
-.cursor {
-  animation: blink 1s steps(1) infinite;
-}
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
 
 .hero {
   display: grid;
@@ -138,12 +104,12 @@ nav a.active, nav a:hover {
 
 .hero h1 {
   font-size: 3rem;
-  color: var(--primary);
+  color: @primary;
 }
 
 .lead {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: @text-muted;
   margin: 1rem 0 1.5rem;
 }
 
@@ -155,7 +121,7 @@ nav a.active, nav a:hover {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: var(--radius);
+  border-radius: @radius;
   font-weight: 600;
   cursor: pointer;
   border: none;
@@ -167,37 +133,37 @@ nav a.active, nav a:hover {
 }
 
 .btn.primary {
-  background-color: var(--primary);
+  background-color: @primary;
   color: #fff;
 }
 
 .btn.primary:hover {
-  background-color: var(--primary-hover);
+  background-color: @primary-hover;
 }
 
 .btn.ghost {
   background-color: transparent;
-  color: var(--text-main);
-  border: 1px solid var(--border);
+  color: @text-main;
+  border: 1px solid @border;
 }
 
 .btn.ghost:hover {
-  background-color: var(--bg-alt);
+  background-color: @bg-alt;
 }
 
 .frame {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background-color: @bg-surface;
+  border: 1px solid @border;
+  border-radius: @radius;
   padding: 0.5rem;
-  box-shadow: var(--shadow);
+  box-shadow: @shadow;
   width: 220px;
 }
 
 .filename {
-  font-family: var(--font-mono);
+  font-family: @font-mono;
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: @text-muted;
   margin-bottom: 0.5rem;
   text-align: center;
 }
@@ -205,9 +171,9 @@ nav a.active, nav a:hover {
 .photo-box {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: calc(var(--radius) - 2px);
+  border-radius: calc(@radius - 2px);
   overflow: hidden;
-  background-color: var(--bg-alt);
+  background-color: @bg-alt;
 }
 
 .photo-box img {
@@ -224,7 +190,7 @@ nav a.active, nav a:hover {
   justify-content: center;
   font-size: 3rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: @text-muted;
 }
 
 dl {
@@ -232,15 +198,15 @@ dl {
   grid-template-columns: auto 1fr;
   gap: 0.5rem 1.5rem;
   margin-top: 1.5rem;
-  background-color: var(--bg-surface);
+  background-color: @bg-surface;
   padding: 1.5rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
+  border-radius: @radius;
+  border: 1px solid @border;
 }
 
 dt {
   font-weight: 600;
-  color: var(--text-muted);
+  color: @text-muted;
 }
 
 .skill-group {
@@ -250,7 +216,7 @@ dt {
 .skill-group h3 {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
-  color: var(--text-muted);
+  color: @text-muted;
 }
 
 .pill-row {
@@ -260,8 +226,8 @@ dt {
 }
 
 .pill {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border);
+  background-color: @bg-surface;
+  border: 1px solid @border;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -275,11 +241,11 @@ dt {
 }
 
 .card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background-color: @bg-surface;
+  border: 1px solid @border;
+  border-radius: @radius;
   padding: 1.5rem;
-  box-shadow: var(--shadow);
+  box-shadow: @shadow;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
@@ -295,15 +261,15 @@ dt {
 }
 
 .stack {
-  font-family: var(--font-mono);
+  font-family: @font-mono;
   font-size: 0.75rem;
-  color: var(--primary);
+  color: @primary;
   margin-bottom: 1rem;
   display: block;
 }
 
 .card p {
-  color: var(--text-muted);
+  color: @text-muted;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
   flex-grow: 1;
@@ -327,7 +293,7 @@ dt {
 
 .contact-list span {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: @text-muted;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -348,10 +314,10 @@ label {
 input[type="text"], textarea {
   width: 100%;
   padding: 0.6rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background-color: var(--bg-surface);
-  color: var(--text-main);
+  border: 1px solid @border;
+  border-radius: @radius;
+  background-color: @bg-surface;
+  color: @text-main;
   font-family: inherit;
 }
 
@@ -373,15 +339,15 @@ textarea {
   background-color: rgba(34, 197, 94, 0.1);
   border: 1px solid #22c55e;
   color: #22c55e;
-  border-radius: var(--radius);
+  border-radius: @radius;
   font-size: 0.85rem;
 }
 
 footer {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid @border;
   text-align: center;
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: @text-muted;
 }
 
 footer p {
@@ -416,8 +382,8 @@ footer p {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--bg-surface);
-    border-bottom: 1px solid var(--border);
+    background-color: @bg-surface;
+    border-bottom: 1px solid @border;
   }
 
   nav.open ul {
@@ -430,3 +396,38 @@ footer p {
     display: inline-block;
   }
 }
+
+
+@card-space: 1.5rem;
+@education-min-width: 255px;
+
+.section-intro {
+  color: @text-muted;
+  margin-bottom: @card-space;
+  max-width: 65ch;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, @education-min-width), 1fr));
+  gap: @card-space;
+}
+
+.education-card {
+  background: @bg-surface;
+  border: 1px solid @border;
+  border-radius: @radius;
+  box-shadow: @shadow;
+  padding: @card-space;
+  h3 {
+    font-size: 1.05rem;
+    color: @primary;
+    margin-bottom: .75rem;
+  }
+  p {
+    color: @text-muted;
+    font-size: .95rem;
+  }
+}
+
+[hidden] { display: none !important; }

@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: @radius;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s, background-color 0.2s;
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &.primary {
+        background-color: @primary;
+        color: #fff;
+
+        &:hover {
+            background-color: @primary-hover;
+        }
+    }
+
+    &.ghost {
+        background-color: transparent;
+        color: @text-main;
+        border: 1px solid @border;
+
+        &:hover {
+            background-color: @bg-alt;
+        }
+    }
+}

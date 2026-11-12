@@ -1,0 +1,60 @@
+  <section id="contact" class="wrap">
+    <h2>Contacto</h2>
+
+    <div class="cols">
+
+      <ul class="contact-list">
+        <li>
+          <span>Correo</span>
+          <a href="mailto:gaba_maldonados43@unicah.com">
+            gaba_maldonados43@unicah.com
+          </a>
+        </li>
+
+        <li>
+          <span>GitHub</span>
+          <a href="https://github.com/gams18" target="_blank" rel="noopener">
+            github.com/gams18
+          </a>
+        </li>
+
+        <li>
+          <span>Número de teléfono</span>
+          +504 9599-3106
+        </li>
+      </ul>
+
+      <div>
+        <form id="contact-form" novalidate>
+          <div>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name">
+            <div class="error" id="name-error"></div>
+          </div>
+
+          <div>
+            <label for="email">Correo</label>
+            <input type="text" id="email" name="email">
+            <div class="error" id="email-error"></div>
+          </div>
+
+          <div>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message"></textarea>
+            <div class="error" id="message-error"></div>
+          </div>
+
+          <button type="submit" class="btn primary">
+            Enviar mensaje
+          </button>
+        </form>
+
+        <div id="form-success">
+          Mensaje validado correctamente.
+          (Este formulario es de demostración: conéctalo a un servicio
+          como Formspree o EmailJS para enviarlo de verdad).
+        </div>
+      </div>
+
+    </div>
+  </section>

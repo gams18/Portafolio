@@ -1,0 +1,18 @@
+
+<section id="projects" class="wrap">
+    <h2>Proyectos</h2>
+
+    <div class="project-grid">
+        {{#each cards}}
+        <article class="card">
+            <h3>{{title}}</h3>
+
+            <span class="stack">
+                {{stack}}
+            </span>
+
+            <p>{{description}}</p>
+        </article>
+        {{/each}}
+    </div>
+</section>

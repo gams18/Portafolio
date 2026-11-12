@@ -1,0 +1,19 @@
+
+<section id="education" class="wrap">
+    <h2>Formación académica</h2>
+
+    <p class="section-intro">
+        Asignaturas relevantes aprobadas en Ingeniería en
+        Ciencias de la Computación, Universidad Católica de
+        Honduras (UNICAH).
+    </p>
+
+    <div class="education-grid">
+        {{#each education}}
+        <article class="education-card">
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+        </article>
+        {{/each}}
+    </div>
+</section>

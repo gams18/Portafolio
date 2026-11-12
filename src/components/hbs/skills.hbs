@@ -1,0 +1,16 @@
+
+<section id="skills" class="wrap">
+    <h2>Habilidades</h2>
+
+    {{#each skills}}
+    <div class="skill-group">
+        <h3>{{title}}</h3>
+
+        <div class="pill-row">
+            {{#each items}}
+            <span class="pill">{{this}}</span>
+            {{/each}}
+        </div>
+    </div>
+    {{/each}}
+</section>
